@@ -1,5 +1,5 @@
-interface Search<Any> {
-    fun searchFlat(mutableMap: MutableMap<Int, Any>) : Set<Any> {
+interface Search<T> {
+    fun searchFlat(mutableMap: MutableMap<Int, T>) : Set<T> {
         return setOf()
     }
 }

@@ -1,9 +1,9 @@
-open class RequestFlatForSale(): Search<FlatForSale> {
+open class RequestFlatForSale(): Search<Building> {
 
-    override fun searchFlat(mutableMap: MutableMap<Int, FlatForSale>): Set<FlatForSale> {
+    override fun searchFlat(mutableMap: MutableMap<Int, Building>): Set<Building> {
       println("Введите максимальную цену квартиры")
       var variablePrice:Int = readLine()!!.toInt()
-      val listOfFlats = mutableMap.values.filter { it.price <= variablePrice}
+      val listOfFlats = mutableMap.values.filter { it.getPrice() <= variablePrice}
       println(listOfFlats)
       return listOfFlats.toSet()
     }
